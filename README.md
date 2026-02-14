@@ -67,6 +67,15 @@ config.window_background_opacity = 0.7
 },
 ```
 
+## 🛠️ オプション - Options -
+```lua
+{
+    bold = true,        -- enable/disable to use bold-style
+    italic = true,      -- enable/disable to use italic-style
+    transparent = true, -- enable/disable transparent background
+}
+```
+
 ## 💡 インスピレーション元 - source of inspire -
 
 <sub>This color theme is inspired from [The Aquarium does not dance](https://daidai7742.wixsite.com/aqua-dance).</sub>  
