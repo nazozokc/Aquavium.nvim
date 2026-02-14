@@ -17,7 +17,7 @@
 |blue|![win11,blue,70per,dark](img/2-win11-blue-70per-dark.png)|![win11,blue,70per,light](img/2-win11-blue-70per-light.png)|
 
 ## 💼 依存関係 - dependents -
-- Neovim 0.11 >=
+- Neovim 0.11+
 - treesitter.nvim (Optional)
 
 ## 🧩 対応しているプラグイン - supported plugins -
