@@ -45,8 +45,26 @@ config.window_background_opacity = 0.7
 ```
 ### On Neovim
 #### Lazy.nvim
-```
-WIP ...
+```lua
+    {
+        "https://github.com/T-b-t-nchos/Aquavium.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            local aquavium = require("Aquavium")
+
+            aquavium.setup({
+                -- options
+
+                ---- For example,
+                -- bold = false,
+                -- italic = false,
+                -- transparent = false,
+            })
+
+            vim.cmd("colorscheme Aquavium")
+        end,
+    },
 ```
 
 ## 💡 インスピレーション元 - source of inspire -
