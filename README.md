@@ -8,10 +8,11 @@
 水族館をモチーフにしたカラーテーマです。  
 
 ## 📷️ 画像 - Images -
-![win11,black,70per,dark](img/2-win11-black-70per-dark.png)
-![win11,black,70per,light](img/2-win11-black-70per-light.png)
-![win11,blue,70per,dark](img/2-win11-blue-70per-dark.png)
-![win11,blue,70per,light](img/2-win11-blue-70per-light.png)
+
+|   |dark|light|
+|---|---|---|
+|black|![win11,black,70per,dark](img/2-win11-black-70per-dark.png)|![win11,black,70per,light](img/2-win11-black-70per-light.png)|
+|blue|![win11,blue,70per,dark](img/2-win11-blue-70per-dark.png)|![win11,blue,70per,light](img/2-win11-blue-70per-light.png)|
 
 ## 💼 依存関係 - dependents -
 - Neovim 0.11 >=
