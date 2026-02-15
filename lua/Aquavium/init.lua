@@ -24,19 +24,17 @@ local function apply_lualine()
         return
     end
 
-    vim.schedule(function()
-        local ok, lualine = pcall(require, "lualine")
-        if not ok then return end
+    local ok, lualine = pcall(require, "lualine")
+    if not ok then return end
 
-        local config = lualine.get_config() or {}
-        config.options = config.options or {}
-        config.options.theme = "Aquavium"
+    local config = lualine.get_config() or {}
+    config.options = config.options or {}
 
-        package.loaded["lualine.themes.Aquavium"] = nil
+    package.loaded["lualine.themes.Aquavium"] = nil
+    config.options.theme = require("lualine.themes.Aquavium")
 
-        lualine.setup(config)
-        lualine.refresh()
-    end)
+    lualine.setup(config)
+    lualine.refresh()
 end
 
 
