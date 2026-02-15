@@ -21,6 +21,7 @@
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (Optional)
 
 ## 🧩 対応しているプラグイン - supported plugins -
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
