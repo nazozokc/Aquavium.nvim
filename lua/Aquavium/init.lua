@@ -112,6 +112,20 @@ function M.setup(user_options)
 
         Directory = { fg = colors.lightblue, bg = colors.bg1 },
 
+        -- lazy.nvim --
+        LazyReasonRuntime = { fg = colors.blue, bg = colors.bg1 },
+        LazyReasonPlugin = { fg = colors.lightblue, bg = colors.bg1 },
+        LazyReasonEvent = { fg = colors.yellow, bg = colors.bg1 },
+        LazyReasonKeys = { fg = colors.rose, bg = colors.bg1 },
+        LazyReasonStart = { fg = colors.cyan, bg = colors.bg1 },
+        LazyReasonSource = { fg = colors.rose, bg = colors.bg1 },
+        LazyReasonFt = { fg = colors.purple, bg = colors.bg1 },
+        LazyReasonCmd = { fg = colors.pink, bg = colors.bg1 },
+        LazyReasonImport = { fg = colors.yellow, bg = colors.bg1 },
+        LazyReasonRequire = { fg = colors.yellow, bg = colors.bg1 },
+        Bold = { bold = options.bold },
+        Italic = { italic = options.italic },
+
         -- treesitter.nvim --
         ['@operator'] = { fg = colors.purple },
 
