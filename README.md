@@ -16,11 +16,11 @@
 |black|![win11,black,70per,dark](img/2-win11-black-70per-dark.png)|![win11,black,70per,light](img/2-win11-black-70per-light.png)|
 |blue|![win11,blue,70per,dark](img/2-win11-blue-70per-dark.png)|![win11,blue,70per,light](img/2-win11-blue-70per-light.png)|
 
-## 💼 依存関係 - dependents -
+## 💼 依存関係 - Dependents -
 - [Neovim](https://github.com/neovim/neovim) 0.11+
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (Optional)
 
-## 🧩 対応しているプラグイン - supported plugins -
+## 🧩 対応しているプラグイン - Supported plugins -
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
@@ -77,7 +77,7 @@ config.window_background_opacity = 0.7
 }
 ```
 
-## 💡 インスピレーション元 - source of inspire -
+## 💡 インスピレーション元 - Source of inspire -
 
 <sub>This color theme is inspired from [The Aquarium does not dance](https://daidai7742.wixsite.com/aqua-dance).</sub>  
 本カラーテーマは[アクアリウムは踊らない](https://daidai7742.wixsite.com/aqua-dance)より、インスピレーションを受けました。  
