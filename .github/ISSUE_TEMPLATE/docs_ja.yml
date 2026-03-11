@@ -4,10 +4,17 @@ title: "[Docs] "
 labels: ["documentation"]
 
 body:
-
-    - type: textarea
-      id: content
-      attributes:
-          label: 内容
+  - type: input
+    id: location
+    attributes:
+      label: 対象ページ / セクション
+      description: URL、ファイルパスと、見出し名を記入してください
       validations:
-          required: true
+        required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      validations:
+        required: true
