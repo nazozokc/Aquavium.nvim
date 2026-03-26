@@ -3,6 +3,7 @@ local M = {}
 local modules = {
     "bufferline",
     "markview",
+    "snacks-nvim",
     "treesitter_context",
 }
 
