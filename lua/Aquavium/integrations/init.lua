@@ -2,7 +2,11 @@ local M = {}
 
 local modules = {
     "bufferline",
+    "dashboard",
+    "lazy-nvim",
     "markview",
+    "nvim-notify",
+    "telescope-nvim",
     "treesitter_context",
 }
 

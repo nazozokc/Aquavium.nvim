@@ -3,6 +3,12 @@
     <sub>Aquarium color scheme on Neovim</sub>
 </div>
 
+<br>
+
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/ee89335e-a442-4a85-bfc0-fc77d9616816" alt="Preview" width="700"/>
+</div>
+
 ## ✨ 概要 - Overview -
 <sub>"Aquavium" is designed for use with a transparent terminal background</sub>  
 "Aquavium"はターミナルの背景を透過させることを前提とした、  
@@ -13,8 +19,8 @@
 
 |TermColor|dark-wallpaper|light-wallpaper|
 |---|---|---|
-|black|![win11,black,70per,dark](img/2-win11-black-70per-dark.png)|![win11,black,70per,light](img/2-win11-black-70per-light.png)|
-|blue|![win11,blue,70per,dark](img/2-win11-blue-70per-dark.png)|![win11,blue,70per,light](img/2-win11-blue-70per-light.png)|
+|black|![win11,000000,70per,dark](./img/win11-000000-70per-dark.png)|![win11,000000,70per,light](./img/win11-000000-70per-light.png)|
+|blue|![win11,02083a,70per,dark](./img/win11-02083a-70per-dark.png)|![win11,blue,70per,light](./img/win11-02083a-70per-light.png)|
 
 ## 💼 依存関係 - Dependents -
 - [Neovim](https://github.com/neovim/neovim) 0.11+
@@ -22,9 +28,11 @@
 
 ## 🧩 対応しているプラグイン - Supported plugins -
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim/)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [Markview.nvim](https://github.com/OXY2DEV/markview.nvim)
+- [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 
 ## 🔧 インストール - Install -
@@ -32,6 +40,10 @@
 <sub>Please set opacity</sub>  
 透明度を設定してください。  
   
+> [!TIP]
+> <sub>Recommend background: #000, transparent: 70%</sub>  
+> 推奨 背景: #000, 不透明度: 70%  
+
 例(example):
 ```lua
 ---- WezTerm Nightly
@@ -48,7 +60,7 @@ config.window_background_opacity = 0.7
 #### Lazy.nvim
 ```lua
 {
-    "https://github.com/T-b-t-nchos/Aquavium.nvim",
+    "T-b-t-nchos/Aquavium.nvim",
     lazy = false,
     priority = 1000,
     config = function()
@@ -79,8 +91,10 @@ config.window_background_opacity = 0.7
 
 ## 💡 インスピレーション元 - Source of inspire -
 
-<sub>This color theme is inspired from [The Aquarium does not dance](https://daidai7742.wixsite.com/aqua-dance).</sub>  
+<sub>This color theme is inspired by [The Aquarium does not dance](https://daidai7742.wixsite.com/aqua-dance).</sub>  
 本カラーテーマは[アクアリウムは踊らない](https://daidai7742.wixsite.com/aqua-dance)より、インスピレーションを受けました。  
+<sub>For more details, please see [here](./docs/TADND.md).</sub>  
+アクアリウムは踊らないについて、詳しくは[こちら](./docs/TADND.md)を御覧ください。  
 <sub>(2026/02/15) Happy 2nd Anniversary!</sub>  
 (2026/02/15) 二周年、おめでとうございます!
   
@@ -96,3 +110,7 @@ config.window_background_opacity = 0.7
 
 > <sub>Also, I’d love to see any requests on GitHub issues.</sub>  
 > また、GitHub issue 上でのリクエスト等もお待ちしています。
+
+## 👥 貢献者 - Contributors -
+<sub>See here:</sub>  
+こちらをご覧ください:  **[🤝Contributors.md](./Contributors.md)**

@@ -1,3 +1,5 @@
+--local utils = require("Aquavium.utils")
+local highlight = require("Aquavium.highlights")
 local M = {}
 
 local default_options = {
@@ -44,29 +46,15 @@ function M.setup(user_options)
         M.options = vim.tbl_deep_extend("force", M.options, user_options)
     end
 
-    local colors = {
-        bg1 =       "#000e1e",
-        bg2 =       "#000e1e",
-        fg =        "#cdd5e5",
-        red =       "#cc0047",
-        green =     "#73bf5e", --(seaweed)
-        blue =      "#004584", --Daidaisan
-        lightblue = "#4fbee3", --Suzu
-        cyan =      "#63deff", --Yadokari
-        yellow =    "#e8dfad", --Retro
-        purple =    "#9f97f5", --Ruru
-        pink =      "#eeb6c7", --Kitty
-        rose =      "#da9197", --Chris
-        gray =      "#5e6a82"
-    }
+    if vim.g.colors_name then
+        vim.cmd("highlight clear")
+    end
+    vim.cmd("syntax reset")
 
     local options = M.options
 
-    if options.transparent then
-        colors.bg1 = "NONE"
-    end
+    M.colors = require("Aquavium.colors").setup(options).colors;
 
-    M.colors = colors
     M.meta = M.options
 
     vim.api.nvim_create_autocmd({ "ModeChanged", "VimEnter" }, {
@@ -82,58 +70,7 @@ function M.setup(user_options)
         end
     })
 
-    local highlights = {
-        Normal = { fg = colors.fg, bg = colors.bg1 },
-        Comment = { fg = colors.gray, bg = colors.bg1, italic = options.italic },
-        Keyword = { fg = colors.yellow, bg = colors.bg1 },
-        String = { fg = colors.lightblue, bg = colors.bg1 },
-        Character = { link = "String"},
-        Number = { fg = colors.pink, bg = colors.bg1 },
-        Float = { link = "Number" },
-        Boolean = { fg = colors.rose, bg = colors.bg1 },
-        LineNr = { fg = colors.gray, bg = colors.bg1 },
-        Function = { fg = colors.cyan, bg = colors.bg1 },
-        EndOfBuffer = { fg = colors.blue, bg = colors.bg1 },
-        MatchParen = { fg = colors.cyan, bg = colors.bg1, bold = options.bold },
-
-        NormalFloat = { fg = colors.fg, bg = colors.bg1 },
-
-        WinBar   = { bg = colors.bg1 },
-        WinBarNC = { bg = colors.bg1 },
-        TabLine = { bg = colors.bg1 },
-        TabLineFill = { bg = colors.bg1 },
-        TabLineSel = { bg = colors.bg1 },
-        StatusLine = { fg = colors.fg, bg = colors.bg1 },
-        StatusLineNC = { bg = colors.bg1 },
-
-        ModeMsg = { fg = colors.purple, bg = colors.bg1 },
-
-        Directory = { fg = colors.lightblue, bg = colors.bg1 },
-
-        -- lazy.nvim --
-        LazyReasonRuntime = { fg = colors.blue, bg = colors.bg1 },
-        LazyReasonPlugin = { fg = colors.lightblue, bg = colors.bg1 },
-        LazyReasonEvent = { fg = colors.yellow, bg = colors.bg1 },
-        LazyReasonKeys = { fg = colors.rose, bg = colors.bg1 },
-        LazyReasonStart = { fg = colors.cyan, bg = colors.bg1 },
-        LazyReasonSource = { fg = colors.rose, bg = colors.bg1 },
-        LazyReasonFt = { fg = colors.purple, bg = colors.bg1 },
-        LazyReasonCmd = { fg = colors.pink, bg = colors.bg1 },
-        LazyReasonImport = { fg = colors.yellow, bg = colors.bg1 },
-        LazyReasonRequire = { fg = colors.yellow, bg = colors.bg1 },
-        Bold = { bold = options.bold },
-        Italic = { italic = options.italic },
-
-        -- treesitter.nvim --
-        ['@operator'] = { fg = colors.purple },
-
-        -- Telescope.nvim --
-        TelescopeBorder = { fg = colors.gray }
-    }
-
-    for group, opts in pairs(highlights) do
-        vim.api.nvim_set_hl(0, group, opts)
-    end
+    highlight.apply(M.colors, options)
 
     vim.g.colors_name = "Aquavium"
 
